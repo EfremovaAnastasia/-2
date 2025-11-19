@@ -4,9 +4,9 @@ public class лабораторная2 {
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
         int[] x = new int[n];
-        int p = -1;
-        int min = 1111111111;
-        int max = -111111111;
+        long p = -1;
+        long min = 2147483647;
+        long max = -2147483648;
         int r = 0;
         for (int i = 0; i < x.length; i++){
             x[i] = in.nextInt();
@@ -22,7 +22,7 @@ public class лабораторная2 {
                     if (x[s] > max)
                         max = x[s];
                 }
-                int d = max - min;
+                long d = max - min;
                 if (d > p) {
                     p = d;
                     r = j;
