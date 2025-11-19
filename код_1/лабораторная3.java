@@ -15,25 +15,24 @@ public class лабораторная3 {
         int c1 = 0;
         while (in.hasNextInt()) {
             int s = in.nextInt();
-            if (s == -l * l) {
+            if (s == (-l * l)) {
                 break;
             }
             st++;
             p += s;
             cr = p / l;
-            int f = p % l;
-            if (f < 0) {
-                f += l;
+            if ((p < 0) && (p % l != 0)) {
                 cr--;
             }
-            if (f != 0) {
-                if (f == a)
-                    a1 = 1;
-                if (f == b)
-                    b1 = 1;
-                if (f == c)
-                    c1 = 1;
-            }
+            int f = p % l;
+            if (f < 0)
+                f += l;
+            if (f == a)
+                a1 = 1;
+            if (f == b)
+                b1 = 1;
+            if (f == c)
+                c1 = 1;
             if ((a1 == 1) && (b1 == 1) && (c1 == 1)) {
                 System.out.println(cr + " " + st);
                 return;
@@ -42,3 +41,4 @@ public class лабораторная3 {
         System.out.println("NO");
     }
 }
+
