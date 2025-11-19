@@ -187,25 +187,24 @@ public class лабораторная3 {
         int c1 = 0;
         while (in.hasNextInt()) {
             int s = in.nextInt();
-            if (s == -l * l) {
+            if (s == (-l * l)) {
                 break;
             }
             st++;
             p += s;
             cr = p / l;
-            int f = p % l;
-            if (f < 0) {
-                f += l;
+            if ((p < 0) && (p % l != 0)) {
                 cr--;
             }
-            if (f != 0) {
-                if (f == a)
-                    a1 = 1;
-                if (f == b)
-                    b1 = 1;
-                if (f == c)
-                    c1 = 1;
-            }
+            int f = p % l;
+            if (f < 0)
+                f += l;
+            if (f == a)
+                a1 = 1;
+            if (f == b)
+                b1 = 1;
+            if (f == c)
+                c1 = 1;
             if ((a1 == 1) && (b1 == 1) && (c1 == 1)) {
                 System.out.println(cr + " " + st);
                 return;
@@ -214,6 +213,7 @@ public class лабораторная3 {
         System.out.println("NO");
     }
 }
+
 ```
 Задача 4.
 ```java
@@ -283,11 +283,23 @@ Input: 10 2 3 4 9 5 6 7 8 9 8
 
 Output: 4
 
+Input:
+
+Output: 
+
 Задача 3.
 
 Input: 100 20 30 50 20 20 60 30 70 50 60 20 -10000
 
 Output: 2 6
+
+Input: 9 1 5 8 2 4 4 4 4 8 7 6 -81
+
+Output: 2 6
+
+Input: 11 3 6 9 1 4 6 3 8 6 5 5 6 9 8 6 -121
+
+Output: 4 10
 
 Задача 4.
 
